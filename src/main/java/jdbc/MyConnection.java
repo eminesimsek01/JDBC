@@ -1,10 +1,7 @@
 package jdbc;
 
 import java.sql.*;
-
 public class MyConnection {
-
-
     public static void main(String[] args) {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fsae01", "root", "Emine2357,");
@@ -24,7 +21,6 @@ public class MyConnection {
                         " " + rs.getInt(4));
             }
             con.close();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

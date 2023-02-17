@@ -1,19 +1,15 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 public class DeleteStatement {
-
 	public DeleteStatement() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		try{			
 
 			// db parameters
