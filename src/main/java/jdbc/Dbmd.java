@@ -1,9 +1,7 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.*;
-
 class Dbmd{
-
 	public static void main(String args[]){
 
 		try{

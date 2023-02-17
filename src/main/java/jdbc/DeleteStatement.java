@@ -32,7 +32,5 @@ public class DeleteStatement {
 
 			con.close();  
 		}catch(SQLException e){ System.out.println(e);}
-
 	}
-
 }
