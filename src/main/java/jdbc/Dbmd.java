@@ -3,9 +3,7 @@ package jdbc;
 import java.sql.*;
 class Dbmd{
 	public static void main(String args[]){
-
 		try{
-
 			// db parameters
 			String url       = "jdbc:mysql://localhost:3306/fsae01";
 			String user      = "root";
@@ -15,7 +13,6 @@ class Dbmd{
 
 			// create a connection to the database
 			Connection con = DriverManager.getConnection(url, user, password);
-
 			DatabaseMetaData dbmd=con.getMetaData();
 
 			System.out.println("Driver Name: "+dbmd.getDriverName());
@@ -25,8 +22,6 @@ class Dbmd{
 			System.out.println("Database Product Version: "+dbmd.getDatabaseProductVersion());
 
 			con.close();
-
 		}catch(Exception e){ System.out.println(e);}
-
 	}
 }

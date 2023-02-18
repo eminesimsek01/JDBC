@@ -13,7 +13,6 @@ class DeletePrepared{
 
 			//create a connection to the database
 			Connection con = DriverManager.getConnection(url, user, password);
-
 			PreparedStatement stmt=con.prepareStatement("delete from ogrenciler where id=? and isim=?, sinav_notu?");
 			stmt.setInt(1,122);
 			stmt.setString(2,"Emine");
@@ -23,7 +22,6 @@ class DeletePrepared{
 			System.out.println(i+" records deleted");
 
 			con.close();
-
 		}catch(Exception e){ System.out.println(e);}
 	}
 }

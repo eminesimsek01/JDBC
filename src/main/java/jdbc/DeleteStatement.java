@@ -10,8 +10,7 @@ public class DeleteStatement {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try{			
-
+		try{
 			// db parameters
 			String url       = "jdbc:mysql://localhost:3306/fsae01";
 			String user      = "root";
@@ -20,14 +19,11 @@ public class DeleteStatement {
 			// Class.forName("com.mysql.cj.jdbc.Driver");
 
 			// create a connection to the database
-			Connection con = DriverManager.getConnection(url, user, password);	
-
+			Connection con = DriverManager.getConnection(url, user, password);
 			Statement stmt= con.createStatement();
-
 			int result=stmt.executeUpdate("delete from ogrenciler where id = 120");
 
 			// int result=stmt.executeUpdate("update ogrenciler set isim = 'Martin Parr' where id = 120");
-
 			System.out.println(result+" records affected");			
 
 			con.close();  
