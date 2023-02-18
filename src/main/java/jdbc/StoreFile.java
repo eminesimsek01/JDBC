@@ -1,8 +1,7 @@
-package com.javatpoint;
+package jdbc;
 
 import java.io.*;
 import java.sql.*;
-
 public class StoreFile {
 	public static void main(String[] args) {
 		try{
@@ -30,6 +29,5 @@ public class StoreFile {
 			con.close();
 
 		}catch (Exception e) {e.printStackTrace();}
-
 	}
 }

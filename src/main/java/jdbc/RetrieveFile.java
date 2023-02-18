@@ -1,8 +1,7 @@
-package com.javatpoint;
+package jdbc;
 
 import java.io.*;
 import java.sql.*;
-
 public class RetrieveFile {
 	public static void main(String[] args) {
 		try{

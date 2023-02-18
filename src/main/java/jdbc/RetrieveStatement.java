@@ -1,17 +1,14 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 public class RetrieveStatement {
-
 	public RetrieveStatement() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -37,7 +34,5 @@ public class RetrieveStatement {
 			con.close();
 
 		}catch(SQLException e){ System.out.println(e);}
-
 	}
-
 }

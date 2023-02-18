@@ -1,4 +1,4 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.*;
 class UpdatePrepared{
@@ -22,8 +22,6 @@ class UpdatePrepared{
 			System.out.println(i+" records updated");
 
 			con.close();
-
 		}catch(Exception e){ System.out.println(e);}
-
 	}
 }

@@ -33,7 +33,5 @@ public class Statement {
 			
 			con.close();  
 			}catch(SQLException e){ System.out.println(e);}
-
 	}
-
 }

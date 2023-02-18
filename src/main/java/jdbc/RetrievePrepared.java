@@ -1,7 +1,6 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.*;
-
 class RetrievePrepared{
 	public static void main(String args[]){
 		try{
@@ -24,6 +23,5 @@ class RetrievePrepared{
 			con.close();
 
 		}catch(Exception e){ System.out.println(e);}
-
 	}
 }

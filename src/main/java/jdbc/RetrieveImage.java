@@ -1,4 +1,4 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.*;
 import java.io.*;
@@ -28,9 +28,7 @@ public class RetrieveImage {
 
 			fout.close();
 			System.out.println("ok");
-
 			con.close();
-
 		}catch (Exception e) {e.printStackTrace();	}
 	}
 }
