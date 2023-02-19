@@ -1,11 +1,9 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-
 public class BatchProcessing {
-
 	public BatchProcessing() {
 		// TODO Auto-generated constructor stub
 	}

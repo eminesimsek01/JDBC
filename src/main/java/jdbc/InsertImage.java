@@ -1,8 +1,7 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.*;
 import java.io.*;
-
 public class InsertImage {
 	public static void main(String[] args) {
 		try{

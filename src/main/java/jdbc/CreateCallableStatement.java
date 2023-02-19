@@ -1,13 +1,11 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import java.sql.Types;
-
 public class CreateCallableStatement {
-
 	public CreateCallableStatement() {
 		// TODO Auto-generated constructor stub
 	}

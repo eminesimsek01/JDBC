@@ -1,10 +1,8 @@
-package com.javatpoint;
+package jdbc;
 
 import javax.sql.RowSetEvent;
 import javax.sql.RowSetListener;
-
 public class MyListener implements RowSetListener {
-
 	public MyListener() {
 		// TODO Auto-generated constructor stub
 	}
