@@ -1,14 +1,13 @@
 package com.javatpoint;
 
-import java.sql.DriverManager;
 import java.sql.Connection;
-import java.sql.Statement;
-import java.sql.ResultSet;
+import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-public class RetrieveStatement {
+public class CreateStatement {
 
-	public RetrieveStatement() {
+	public CreateStatement() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -25,14 +24,13 @@ public class RetrieveStatement {
 			// Class.forName("com.mysql.cj.jdbc.Driver");
 
 			// create a connection to the database
-			Connection con = DriverManager.getConnection(url, user, password);
+			Connection con = DriverManager.getConnection(url, user, password);	
 
-			Statement stmt = con.createStatement(); 
+			Statement stmt = con.createStatement();
 
-			ResultSet rs = stmt.executeQuery("select * from ogrenciler");	
-			
-			while(rs.next())  
-				System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getInt(4));		
+			int result=stmt.executeUpdate("create table personel(id char(4), isim varchar(40), maas int)");
+
+			System.out.println(result + " records affected");			
 
 			con.close();
 

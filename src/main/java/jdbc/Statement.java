@@ -1,10 +1,13 @@
-package jdbc;
+package com.javatpoint;
 
 import java.sql.*;
+
 public class Statement {
+
 	public Statement() {
 		// TODO Auto-generated constructor stub
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 				
@@ -33,5 +36,7 @@ public class Statement {
 			
 			con.close();  
 			}catch(SQLException e){ System.out.println(e);}
+
 	}
+
 }
