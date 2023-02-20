@@ -1,16 +1,13 @@
-package TelRehberi;
-
+package jdbc.TelRehberi;
 
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetProvider;
 import java.sql.*;
 import java.util.ArrayList;
-
 public class DBaseHelper {
     Connection connection = null;
     Statement statement = null;
     PreparedStatement pStatement = null;
-
     private void dBaseConnect() {
         String url = "jdbc:mysql://localhost:3306/";
         String username = "newuser";
@@ -56,7 +53,6 @@ public class DBaseHelper {
                     " isim VARCHAR(45), " +
                     " tel VARCHAR(20)); ";
             statement.executeUpdate(sql);
-
         } catch (SQLException e) {
             System.out.println("Hata CreateDbase" + e.toString());
         } finally {
@@ -76,14 +72,12 @@ public class DBaseHelper {
             pStatement.setString(2, kayit.getTel());
             useTelefonRehberi();
             pStatement.executeUpdate();
-
         } catch (SQLException e) {
             System.out.println("result=" + result);
             throw new RuntimeException(e);
         } finally {
             dBaseClose();
         }
-
     }
 
     public void deleteData(int id) {
@@ -99,7 +93,6 @@ public class DBaseHelper {
         } finally {
             dBaseClose();
         }
-
     }
 
     public void upDateData(kayitSinifi kayit) {
@@ -117,7 +110,6 @@ public class DBaseHelper {
         } finally {
             dBaseClose();
         }
-
     }
 
     public ArrayList<kayitSinifi> listData() {

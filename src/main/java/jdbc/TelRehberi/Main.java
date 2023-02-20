@@ -1,10 +1,9 @@
-package TelRehberi;
+package jdbc.TelRehberi;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Main {
     static ArrayList<kayitSinifi> telList = new ArrayList<>();
     static kayitSinifi kayit;
@@ -58,7 +57,6 @@ public class Main {
         System.out.print("Tel No : ");
         kayit.setTel(scanNL.nextLine());
         db.addData(kayit);
-
         kayit.id = db.getLastIndex();
         telList.add(kayit);
         // telList = db.listData(); // ustekı ıkı satır yerıne
@@ -79,7 +77,6 @@ public class Main {
                 kayit = telList.get(i);
                 index = i;
             }
-
         }
         if (idInclude) {
             System.out.println("güncellemek istemediğiniz alana x yazarak entere basın");
@@ -122,13 +119,11 @@ public class Main {
                 kayit = telList.get(i);
                 index = i;
             }
-
         }
         if (idInclude) {
             System.out.printf("%5d%20s%15s%n", kayit.getId(), kayit.getIsim(), kayit.getTel());
             System.out.print("Yukarıdaki kayıt silinecektir onaylıyor musunuz(E:Evet)");
             String secim = scan.next();
-
             if (secim.equalsIgnoreCase("E")) {
                 telList.remove(index);
                 db.deleteData(kayit.getId());
@@ -144,7 +139,6 @@ public class Main {
         System.out.printf("%4S%20S%17S\n", "--", "------------", "------------");
         for (int i = 0; i < telList.size(); i++) {
             System.out.printf("%4d%20s%17s\n", telList.get(i).getId(), telList.get(i).getIsim(), telList.get(i).getTel());
-
         }
         if (telList.size() == 0) System.out.println("Gösterilebilecek kayıt bulunamadı");
     }
