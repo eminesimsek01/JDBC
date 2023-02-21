@@ -7,9 +7,7 @@ public class BatchProcessing {
 	public BatchProcessing() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public static void main(String args[]){
-
 		try {
 			// db parameters
 			String url       = "jdbc:mysql://localhost:3306/fsae01";
@@ -20,9 +18,7 @@ public class BatchProcessing {
 
 			// create a connection to the database
 			Connection con = DriverManager.getConnection(url, user, password);
-
 			con.setAutoCommit(false);
-
 			Statement stmt = con.createStatement();
 
 			stmt.addBatch("insert into ogrenciler values(420,'Ali Can','Ankara',75)");
@@ -34,13 +30,9 @@ public class BatchProcessing {
 			System.out.println(i[1]+" records inserted");
 
 			// con.commit();
-			con.rollback();					
-
+			con.rollback();
 			con.close();
 
-
 		}catch(Exception e){ System.out.println(e);}
-
 	}
-
 }

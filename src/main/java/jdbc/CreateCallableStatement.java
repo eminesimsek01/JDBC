@@ -9,12 +9,9 @@ public class CreateCallableStatement {
 	public CreateCallableStatement() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		try{		
-
+		try{
 			// db parameters
 			String url       = "jdbc:mysql://localhost:3306/fsae01";
 			String user      = "root";
@@ -23,8 +20,7 @@ public class CreateCallableStatement {
 			// Class.forName("com.mysql.cj.jdbc.Driver");
 
 			// create a connection to the database
-			Connection con = DriverManager.getConnection(url, user, password);	
-
+			Connection con = DriverManager.getConnection(url, user, password);
 			CallableStatement stmt = con.prepareCall("{call sp_ogrenci_bilgi(?, ?, ?)}");
 
 			stmt.setInt(1,320);		
@@ -39,7 +35,5 @@ public class CreateCallableStatement {
 			con.close();
 
 		} catch(SQLException e){ System.out.println(e);}
-
 	}
-
 }
