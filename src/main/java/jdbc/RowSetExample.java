@@ -1,18 +1,13 @@
-package com.javatpoint;
+package jdbc;
 
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetProvider;
-
 public class RowSetExample {
-
 	public RowSetExample() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -24,7 +19,6 @@ public class RowSetExample {
 			rowSet.setPassword("Aa123456");  
 
 			rowSet.setCommand("select * from ogrenciler");
-
 			rowSet.execute();
 
 			// Adding Listener and moving RowSet  
@@ -36,12 +30,8 @@ public class RowSetExample {
 				System.out.println("Isim: " + rowSet.getString(2));  
 				System.out.println("Adres: " + rowSet.getString(3));
 				System.out.println("Not: " + rowSet.getInt(4));
-			}		
-
+			}
 			rowSet.close();
-
 		} catch(Exception e){ System.out.println(e);}
-
 	}
-
 }

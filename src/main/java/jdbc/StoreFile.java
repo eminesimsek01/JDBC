@@ -1,8 +1,7 @@
-package com.javatpoint;
+package jdbc;
 
 import java.io.*;
 import java.sql.*;
-
 public class StoreFile {
 	public static void main(String[] args) {
 		try{
@@ -15,8 +14,6 @@ public class StoreFile {
 
 			// create a connection to the database
 			Connection con = DriverManager.getConnection(url, user, password);
-
-
 			PreparedStatement ps=con.prepareStatement("insert into personel (id, isim, maas, fotograf, cv) values(?,?,?,?,?)");
 
 			File f = new File("C:\\CV.txt");
@@ -26,16 +23,12 @@ public class StoreFile {
 			ps.setString(2,"Veli Mert");
 			ps.setInt(3,85000);
 			ps.setString(4,null);
-			
 			ps.setCharacterStream(5,fr,(int)f.length());
 			
 			int i=ps.executeUpdate();
-			
 			System.out.println(i+" records inserted");
 
 			con.close();
-
 		}catch (Exception e) {e.printStackTrace();}
-
 	}
 }
