@@ -6,7 +6,6 @@ public class MyListener implements RowSetListener {
 	public MyListener() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public void cursorMoved(RowSetEvent event) {  
 		System.out.println("Cursor Moved...");  
 	}  
@@ -15,7 +14,5 @@ public class MyListener implements RowSetListener {
 	}  
 	public void rowSetChanged(RowSetEvent event) {  
 		System.out.println("RowSet changed...");  
-	}  
-
-
+	}
 }

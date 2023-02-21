@@ -1,20 +1,16 @@
-package com.javatpoint;
+package jdbc;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
-
 public class MysqlCon {
 
 	public MysqlCon() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-				
-		try{			
-        			
+		try{
 			// db parameters
             String url       = "jdbc:mysql://localhost:3306/fsae01";
             String user      = "root";
@@ -31,9 +27,6 @@ public class MysqlCon {
 			if (con!=null) System.out.println("Connection OK");
 
 			con.close();
-			
 			}catch(SQLException e){ System.out.println(e);}
-
 	}
-
 }
